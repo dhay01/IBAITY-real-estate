@@ -2,8 +2,6 @@ import React from "react";
 import '../style/index.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import similar from '../assets/similar.png'
-import logo from "../assets/footer-logo-qr.png";
 
 export default function Carousal() {
     return (

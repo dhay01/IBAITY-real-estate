@@ -4,50 +4,40 @@ import Logo from './logo'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import user from '../assets/user.png';
-import ButtonDropdown from './buttons'
+import ButtonDropdown, {UserBuntton} from './buttons'
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import logo from "../assets/footer-logo-qr.png";
 
-const Navbar = () => {
+export default function NavbarFunction() {
     return (
+        <div className="navbar">
 
-        <nav>
-            <Row>
-                <Col>
-                    <div className="nav-logo">
-                        <Logo/>
-                        <span>
-                 <h3 className="nav-text-main">real estate in IRAQ</h3>
-            </span>
-                    </div>
-                </Col>
-                <Col xs={4}></Col>
-                <Col>
-                    <Row className="nav-secondary">
-                        <Col className="language" xs={2}>
-                            language:
-                        </Col>
-                        <Col xs={3}>
-                            <ButtonDropdown/>
-                        </Col>
-                        <Col>
-                            <Row>
-                                <Col>
-                                    <img src={user} alt="Logo"/>
-                                </Col>
-                                <Col xs={8}>username</Col>
-                                {/*<Col>*/}
+            <Navbar fixed="top" className="navbar-bootstrap">
 
-                                {/*</Col>*/}
-                            </Row>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+                <Navbar.Brand href="#">
+                    <img className="logo-nav-qr" src={logo} alt="logo"/>
+                </Navbar.Brand>
+                <Navbar.Toggle/>
+                <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Text>
 
+                    </Navbar.Text>
+                </Navbar.Collapse>
+                <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Text className="nav-buttongroup">
+                        <h5 className="language"> Language:</h5>
+                        <ButtonDropdown/>
+                       <UserBuntton/>
+                    </Navbar.Text>
+                </Navbar.Collapse>
 
-        </nav>
+            </Navbar>
+
+        </div>
 
 
     );
 };
 
-export default Navbar;
+
