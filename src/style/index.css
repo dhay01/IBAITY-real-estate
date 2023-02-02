@@ -25,9 +25,9 @@ nav {
 
 }
 
-.navbar-bootstrap{
+.navbar-bootstrap {
     width: 100%;
-        box-shadow: 0px 2.4px 2.4px -1.6px rgba(0, 0, 0, 0.2), 0px 2.4px 3.2px rgba(0, 0, 0, 0.14), 0px 0.8px 6.4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2.4px 2.4px -1.6px rgba(0, 0, 0, 0.2), 0px 2.4px 3.2px rgba(0, 0, 0, 0.14), 0px 0.8px 6.4px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -46,10 +46,12 @@ nav {
 .nav-logo {
     display: flex;
 }
-.logo-nav-qr{
+
+.logo-nav-qr {
     height: 40px;
     padding-left: 10px;
 }
+
 .nav-secondary {
     padding-top: 10px;
 }
@@ -72,15 +74,18 @@ nav {
     margin-right: 20px;
 
 }
-#bg-nested-dropdown2{
+
+#bg-nested-dropdown2 {
     background: #0C3352;
     border: none;
     margin-right: 30px;
 
 }
-.nav-buttongroup{
+
+.nav-buttongroup {
     display: inline-flex;
 }
+
 .mainContainer {
     width: 96%;
     height: 2500px;
@@ -126,7 +131,7 @@ nav {
 }
 
 .ownerInfo1 {
-    height: 40px !important;
+    height: 5px !important;
     color: white;
 }
 
@@ -134,7 +139,7 @@ nav {
     width: 90px;
     height: 90px;
     margin-left: 40%;
-    margin-top: 20%;
+    margin-top: 10%;
 
 }
 
@@ -486,8 +491,9 @@ footer p {
     padding-left: 50px;
     padding-top: 100px;
 }
+
 .col2 {
-   padding-top: 100px;
+    padding-top: 100px;
     padding-left: 50px;
 
 }
@@ -495,31 +501,101 @@ footer p {
 .about-us {
     display: inline-flex;
 }
-.col1 ul{
+
+.col1 ul {
     list-style: none;
 }
-.col1 ul li{
+
+.col1 ul li {
     padding-bottom: 15px;
 }
-.col2 ul{
+
+.col2 ul {
     list-style: none;
 }
-.col2 ul li{
+
+.col2 ul li {
     padding-bottom: 15px;
 }
-.ios{
+
+.ios {
     margin-left: -15px;
 }
-.footer-secondary{
+
+.footer-secondary {
     width: 80%;
     margin-left: 8%;
     margin-right: 8%;
 }
-.copyright{
-text-align: center;
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-color: #FFFFFF;
-opacity: 0.5;
+
+.copyright {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+/*--modal popup*/
+.pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.pop-up-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    width: 80%;
+    height: 400px;
+    max-width: 400px;
+}
+
+.report {
+    margin-left: 90%;
+    background: none;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.report:hover {
+    filter: brightness(1.5);
+}
+.input{
+    width: 300px;
+    /*margin: 5px;*/
+
+}
+.close{
+    margin-left: 350px;
+    background: none;
+    border: none;
+
+}
+.text{
+    height: 100px;
+
+}
+.button-send{
+    background-color: #0c2841;
+    margin-right: 20px;
+}
+.button-send:hover{
+        background-color: #344557;
+}
+.alert{
+    background:none;
+    outline: none;
+    border: none;
+padding: 10px;
 }

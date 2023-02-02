@@ -12,7 +12,20 @@ import Table from "./table";
 import Qrcode from "./QR";
 import Carousal from "./carousal";
 import next from "../assets/Polygon1.png"
+import {useState} from 'react';
+import report from '../assets/report.png'
+import ReportForm from "./reportForm";
+
 function MainContainer() {
+    const [showPopUp, setShowPopUp] = useState(false);
+
+    const handleClose = () => {
+        setShowPopUp(false);
+    };
+
+    const handleOpen = () => {
+        setShowPopUp(true);
+    };
     return (
         <div className="mainContainer">
             <BreadcrumbExample/>
@@ -21,11 +34,20 @@ function MainContainer() {
                 <div className="mainPhotoContainer">
                     <Row>
                         <Col>
-                            <div>
 
-                            </div>
                         </Col>
                         <Col xs={4} className="ownerInfo">
+                            <button className="report" onClick={handleOpen}>
+                                <img src={report}/>
+                            </button>
+                            {showPopUp && (
+                                <div className="pop-up">
+                                    <div className="pop-up-content">
+                                        <button className="close" onClick={handleClose}>X</button>
+                                       <ReportForm/>
+                                    </div>
+                                </div>
+                            )}
                             <div className="ownerInfo1">
                                 <img src={user} className="photoPlaceholder" alt="Logo"/>
                                 <div className="ownerInfo2">
@@ -87,7 +109,7 @@ function MainContainer() {
                     </Col>
                 </Row>
                 <div className="similar">
-                     <h3>Similar real estate</h3>
+                    <h3>Similar real estate</h3>
                 </div>
                 <Row>
                     <Col>
@@ -99,10 +121,10 @@ function MainContainer() {
                     <Col>
                         <Carousal/>
                     </Col>
-                     <Col xs={1} className="next">
-                         <img src={next} alt="next"/>
+                    <Col xs={1} className="next">
+                        <img src={next} alt="next"/>
 
-                </Col>
+                    </Col>
 
                 </Row>
 
